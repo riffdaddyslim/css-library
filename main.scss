@@ -1,0 +1,37 @@
+@use "./variables";
+@use "./normalize";
+
+// Compiles __partials to all breakpoints
+@at-root { 
+    $post: &;
+    @import "./_partials";
+}
+
+@media screen and (min-width: $medium) {
+    -ns {
+        $post: &;
+        @at-root{ @import "./_partials"; }
+    }
+}
+
+@media screen and (min-width: $medium) and (max-width: $large) {
+    -m {
+        $post: &;
+        @at-root{ @import "./_partials"; }
+    }
+}
+
+@media screen and (min-width: $large) and (max-width: $xlarge) {
+    -l {
+        $post: &;
+        @at-root{ @import "./_partials"; }
+    }
+}
+
+
+@media screen and (min-width: $xlarge) {
+    -xl {
+        $post: &;
+        @at-root{ @import "./_partials"; }
+    }
+}
