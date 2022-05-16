@@ -1,5 +1,5 @@
-@use "./variables";
 @use "./normalize";
+@import "./variables";
 
 // Compiles __partials to all breakpoints
 @at-root { 
