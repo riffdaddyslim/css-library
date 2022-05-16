@@ -1,4 +1,11 @@
 $directions: column, column-reverse, row, row-reverse;
+$spacings: (
+    between: space-between,
+    start: flex-start,
+    end: flex-end,
+    center: center,
+    around: space-around
+);
 .flex {
     @each $d in $directions {
         &-#{$d}#{$post} {
@@ -6,3 +13,12 @@ $directions: column, column-reverse, row, row-reverse;
         }
     }
 }
+
+.justify {
+    @each $name, $s in $spacings {
+        &-#{$name}#{$post} {
+            justify-content: $s;
+        }
+    }
+}
+
