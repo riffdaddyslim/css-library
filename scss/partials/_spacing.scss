@@ -1,0 +1,20 @@
+$types: "m", "p";
+$variants: "a", "t", "r", "b", "l";
+
+@each $t in $types {
+    @each $v in $variants {
+        @for $i from 1 through 7 {
+            .#{$t} {
+                &#{$v}#{$i}#{$post} {
+                    margin: $i * $spacing;
+                }
+            }
+        }
+    }
+}
+
+@for $i from 1 through 5 {
+    .gap#{$i}#{$post} {
+        gap: $i * $spacing;
+    }
+}
