@@ -6,6 +6,15 @@ $spacings: (
     center: center,
     around: space-around
 );
+
+$aligns: (
+    center: center,
+    start: flex-start,
+    end: flex-end,
+    stretch: stretch,
+    baseline: baseline
+);
+
 .flex {
     @each $d in $directions {
         &-#{$d}#{$post} {
@@ -22,3 +31,10 @@ $spacings: (
     }
 }
 
+.items {
+    @each $name, $a in $aligns {
+        &-#{$name}#{$post} {
+            align-items: $a;
+        }
+    }
+}
