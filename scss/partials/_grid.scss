@@ -1,0 +1,27 @@
+.grid {
+    @for $c from 2 through 12 {
+        &-#{$c}#{$post} {
+            grid-template-columns: repeat($c, 1fr);
+        }
+    }
+
+    @for $c from 2 through 12 {
+        &-#{$c}#{$post} {
+            grid-template-rows: repeat($c, 1fr);
+        }
+    }
+}
+
+.col-span {
+    @for $c from 2 through 12 {
+        &-#{$c}#{$post} {
+            grid-column: auto / span $c;
+        }
+    }
+}
+
+.row-span {
+    @for $i from 2 through 12 { 
+        &-#{$i}#{$post} { grid-row: auto / span #{$i} }
+    }
+}
