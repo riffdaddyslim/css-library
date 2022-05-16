@@ -1,0 +1,40 @@
+$directions: column, column-reverse, row, row-reverse;
+$spacings: (
+    between: space-between,
+    start: flex-start,
+    end: flex-end,
+    center: center,
+    around: space-around
+);
+
+$aligns: (
+    center: center,
+    start: flex-start,
+    end: flex-end,
+    stretch: stretch,
+    baseline: baseline
+);
+
+.flex {
+    @each $d in $directions {
+        &-#{$d}#{$post} {
+            flex-direction: $d;
+        }
+    }
+}
+
+.justify {
+    @each $name, $s in $spacings {
+        &-#{$name}#{$post} {
+            justify-content: $s;
+        }
+    }
+}
+
+.items {
+    @each $name, $a in $aligns {
+        &-#{$name}#{$post} {
+            align-items: $a;
+        }
+    }
+}
