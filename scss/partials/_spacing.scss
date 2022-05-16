@@ -1,5 +1,5 @@
-$types: "m", "p";
-$variants: "a", "t", "r", "b", "l";
+$types: m, p;
+$variants: a, t, r, b, l;
 
 @each $t in $types {
     @each $v in $variants {

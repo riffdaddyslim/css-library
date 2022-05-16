@@ -1,10 +1,10 @@
 $displays: (
-    "n": "none",
-    "b": "block",
-    "ib": "inline-block",
-    "i": "inline",
-    "f": "flex",
-    "g": "grid"
+    n: none,
+    b: block,
+    ib: inline-block,
+    i: inline,
+    f: flex,
+    g: grid
 );
 
 @each $name, $display in $displays {
