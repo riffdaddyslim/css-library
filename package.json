@@ -1,0 +1,23 @@
+{
+  "name": "css-library",
+  "version": "1.0.0",
+  "description": "Repo for my custom css library built with scss.",
+  "main": "main.scss",
+  "scripts": {
+    "dev": "sass --watch scss:public/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/riffdaddyslim/css-library.git"
+  },
+  "keywords": [],
+  "author": "Tyler Riffle",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/riffdaddyslim/css-library/issues"
+  },
+  "homepage": "https://github.com/riffdaddyslim/css-library#readme",
+  "devDependencies": {
+    "sass": "^1.51.0"
+  }
+}
