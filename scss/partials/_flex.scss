@@ -1,0 +1,8 @@
+$directions: column, column-reverse, row, row-reverse;
+.flex {
+    @each $d in $directions {
+        &-#{$d}#{$post} {
+            flex-direction: $d;
+        }
+    }
+}
