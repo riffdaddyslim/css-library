@@ -21,12 +21,12 @@ $variants: "a", "t", "r", "b", "l";
 
 @for $i from 1 through 5 {
     .row-gap#{$i}#{$post} {
-        gap: $i * $spacing;
+        row-gap: $i * $spacing;
     }
 }
 
 @for $i from 1 through 5 {
     .col-gap#{$i}#{$post} {
-        gap: $i * $spacing;
+        column-gap: $i * $spacing;
     }
 }
