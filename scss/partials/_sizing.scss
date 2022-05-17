@@ -49,6 +49,20 @@
     }
 }
 
+.mh {
+    @for $e from 1 through 5 {
+        &#{$e}#{$post} {
+            max-height: 2rem * pow(2, ($e - 1));
+        }
+    }
+
+    @for $i from 1 through 10 {
+        &-#{$i * 10}#{$post} {
+            max-height: $i * 10%;
+        }
+    }
+}
+
 .vh {
     @for $i from 1 through 11 {
         &-#{$i * 10}#{$post} {
