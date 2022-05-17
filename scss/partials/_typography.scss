@@ -22,6 +22,17 @@
     }
 }
 
+// Style
+$styles: (
+    i: italic,
+    n: normal
+);
+@each $class, $style in $styles {
+    .fs-#{$class}#{$post} {
+        font-style: $style;
+    }
+}
+
 // Text Decoration
 $decorations: dashed, dotted, double, line-through, none, overline, solid, underline, wavy;
 @each $d in $decorations {
