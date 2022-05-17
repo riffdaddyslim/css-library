@@ -34,3 +34,16 @@
         }
     }
 }
+.h {
+    @for $e from 1 through 5 {
+        &#{$e}#{$post} {
+            height: 2rem * pow(2, ($e - 1));
+        }
+    }
+
+    @for $i from 1 through 10 {
+        &-#{$i * 10}#{$post} {
+            height: $i * 10%;
+        }
+    }
+}
