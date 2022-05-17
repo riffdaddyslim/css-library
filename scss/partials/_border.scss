@@ -7,6 +7,7 @@ $types: (
 );
 
 $styles: dashed, dotted, double, groove, hidden, inset, none, outset, ridge, solid;
+
 .b {
     // Color
     @each $name, $color in $colors {
@@ -14,6 +15,7 @@ $styles: dashed, dotted, double, groove, hidden, inset, none, outset, ridge, sol
             border-color: $color;
         }
     }
+
     // Radius
     &r {
         @for $i from 1 through 10 {
@@ -26,12 +28,14 @@ $styles: dashed, dotted, double, groove, hidden, inset, none, outset, ridge, sol
             }
         }
     }
+
     // Style
     @each $style in $styles {
         &-#{$style}#{$post} {
             border-style: $style;
         }
     }
+
     // Type
     @each $b, $type in $types {
         &#{$b}#{$post} {
@@ -41,4 +45,10 @@ $styles: dashed, dotted, double, groove, hidden, inset, none, outset, ridge, sol
 
     &n#{$post} { border: none; }
 
+    // Width
+    @for $e from 1 through 5 {
+        &w#{$e}#{$post} {
+            border-width: 0.25rem * pow(2, ($e - 1));
+        }
+    }
 }
