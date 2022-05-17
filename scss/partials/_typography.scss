@@ -4,3 +4,11 @@
         color: $color;
     }
 }
+
+// Text Decoration
+$decorations: dashed, dotted, double, line-through, none, overline, solid, underline, wavy;
+@each $d in $decorations {
+    .td-#{$d}#{$post} {
+        text-decoration: $d;
+    }
+}
