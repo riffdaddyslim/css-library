@@ -1,0 +1,163 @@
+// Alignment
+$alignments: (
+    l: left,
+    c: center,
+    r: right,
+    j: justify
+);
+.t {
+    @each $name, $align in $alignments {
+        &#{$name}#{$post} {
+            text-align: $align;
+        }
+    }
+}
+
+// Color
+@each $name, $color in $colors {
+    .#{$name}#{$post} {
+        color: $color;
+    }
+}
+
+// Line Height
+.lh {
+    @for $i from 1 through 5 {
+        &#{$i}#{$post} {
+            line-height: 1 + ($i * .25em);
+        }
+    }
+}
+
+// Overflow
+$widths: (
+    "": 30em,
+    narrow: 20em,
+    wide: 35em
+);
+.measure { 
+    @each $name, $width in $widths {
+        &-#{$name}#{$post} {
+            max-width: $width;
+        }
+    }
+}
+
+.truncate#{$post} {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+// Sizing
+.f {
+    @for $i from 1 through 6 {
+        &#{$i}#{$post} {
+            font-size: $i * .75rem;
+        }
+    }
+
+    &-head#{$post} {
+        font-size: 6rem;
+    }
+
+    &-sub#{$post} {
+        font-size: 5rem;
+    }
+}
+
+// Spacing
+.ls {
+    &-tight#{$post} {
+        letter-spacing: -0.05em;
+    }
+
+    @for $i from 1 through 5 {
+        &#{$i}#{$post} {
+            letter-spacing: $i * .05em;
+        }
+    }
+}
+
+// Style
+$styles: (
+    i: italic,
+    n: normal
+);
+@each $class, $style in $styles {
+    .fs-#{$class}#{$post} {
+        font-style: $style;
+    }
+}
+
+// Text Decoration
+$decorations: dashed, dotted, double, line-through, none, overline, solid, underline, wavy;
+@each $d in $decorations {
+    .td-#{$d}#{$post} {
+        text-decoration: $d;
+    }
+}
+
+// Transforms
+$transforms: (
+    c: capitalize,
+    l: lowercase,
+    n: none,
+    u: uppercase,
+);
+.tt {
+    @each $name, $transform in $transforms {
+        &#{$name}#{$post} {
+            text-transform: $transform;
+        }
+    }
+}
+
+// Weights
+$weights: (
+    i: italic,
+    n: normal
+);
+.fw {
+    @each $class, $weight in $weights {
+        &-#{$class}#{$post} {
+            font-weight: $weight;
+        }
+    }
+
+    @for $i from 1 through 9 {
+        &#{$i}#{$post} {
+            font-weight: $i * 100;
+        }
+    }
+}
+
+// White Space
+$whiteSpace: pre, normal, nowrap;
+.ws {
+    @each $ws in $whiteSpace {
+        &-#{$ws}#{$post} {
+            white-space: $ws;
+        }
+    }
+}
+
+// Word Break
+$break: (
+    break: break-all,
+    keep: keep-all,
+    normal: normal,
+    word: break-word
+);
+.wb {
+    @each $name, $break in $break {
+        &-#{$name}#{$post} {
+            word-break: $break;
+        }
+    }
+}
+
+// Variants
+.small-caps#{$post} {
+    font-variant: small-caps;
+}
