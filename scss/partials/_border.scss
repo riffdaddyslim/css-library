@@ -8,6 +8,12 @@ $types: (
 
 $styles: dashed, dotted, double, groove, hidden, inset, none, outset, ridge, solid;
 .b {
+    // Color
+    @each $name, $color in $colors {
+        &-#{$name}#{$post} {
+            border-color: $color;
+        }
+    }
     // Radius
     &r {
         @for $i from 1 through 10 {
