@@ -1,10 +1,45 @@
-// Alignment
 $alignments: (
     l: left,
     c: center,
     r: right,
     j: justify
 );
+
+$break: (
+    break: break-all,
+    keep: keep-all,
+    normal: normal,
+    word: break-word
+);
+
+$decorations: dashed, dotted, double, line-through, none, overline, solid, underline, wavy;
+
+$styles: (
+    i: italic,
+    n: normal
+);
+
+$transforms: (
+    c: capitalize,
+    l: lowercase,
+    n: none,
+    u: uppercase,
+);
+
+$weights: (
+    i: italic,
+    n: normal
+);
+
+$whiteSpace: pre, normal, nowrap;
+
+$widths: (
+    "": 30em,
+    narrow: 20em,
+    wide: 35em
+);
+
+// Alignment
 .t {
     @each $name, $align in $alignments {
         &#{$name}#{$post} {
@@ -30,11 +65,6 @@ $alignments: (
 }
 
 // Overflow
-$widths: (
-    "": 30em,
-    narrow: 20em,
-    wide: 35em
-);
 .measure { 
     @each $name, $width in $widths {
         &-#{$name}#{$post} {
@@ -80,10 +110,6 @@ $widths: (
 }
 
 // Style
-$styles: (
-    i: italic,
-    n: normal
-);
 @each $class, $style in $styles {
     .fs-#{$class}#{$post} {
         font-style: $style;
@@ -91,7 +117,6 @@ $styles: (
 }
 
 // Text Decoration
-$decorations: dashed, dotted, double, line-through, none, overline, solid, underline, wavy;
 @each $d in $decorations {
     .td-#{$d}#{$post} {
         text-decoration: $d;
@@ -99,12 +124,6 @@ $decorations: dashed, dotted, double, line-through, none, overline, solid, under
 }
 
 // Transforms
-$transforms: (
-    c: capitalize,
-    l: lowercase,
-    n: none,
-    u: uppercase,
-);
 .tt {
     @each $name, $transform in $transforms {
         &#{$name}#{$post} {
@@ -114,10 +133,6 @@ $transforms: (
 }
 
 // Weights
-$weights: (
-    i: italic,
-    n: normal
-);
 .fw {
     @each $class, $weight in $weights {
         &-#{$class}#{$post} {
@@ -133,7 +148,6 @@ $weights: (
 }
 
 // White Space
-$whiteSpace: pre, normal, nowrap;
 .ws {
     @each $ws in $whiteSpace {
         &-#{$ws}#{$post} {
@@ -143,12 +157,6 @@ $whiteSpace: pre, normal, nowrap;
 }
 
 // Word Break
-$break: (
-    break: break-all,
-    keep: keep-all,
-    normal: normal,
-    word: break-word
-);
 .wb {
     @each $name, $break in $break {
         &-#{$name}#{$post} {
