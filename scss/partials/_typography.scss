@@ -78,6 +78,21 @@ $decorations: dashed, dotted, double, line-through, none, overline, solid, under
     }
 }
 
+// Transforms
+$transforms: (
+    c: capitalize,
+    l: lowercase,
+    n: none,
+    u: uppercase,
+);
+.tt {
+    @each $name, $transform in $transforms {
+        &#{$name}#{$post} {
+            text-transform: $transform;
+        }
+    }
+}
+
 // Weights
 $weights: (
     i: italic,
