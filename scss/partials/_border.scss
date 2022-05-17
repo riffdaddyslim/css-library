@@ -1,0 +1,19 @@
+$types: (
+    a: "",
+    t: -top,
+    r: -right,
+    b: -bottom,
+    l: -left
+);
+
+.b {
+    // Type
+    @each $b, $type in $types {
+        &#{$b}#{$post} {
+            border#{$type}: 1px solid;
+        }
+    }
+
+    &n#{$post} { border: none; }
+
+}
