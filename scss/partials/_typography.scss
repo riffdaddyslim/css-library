@@ -29,6 +29,26 @@ $alignments: (
     }
 }
 
+// Overflow
+$widths: (
+    "": 30em,
+    narrow: 20em,
+    wide: 35em
+);
+.measure { 
+    @each $name, $width in $widths {
+        &-#{$name}#{$post} {
+            max-width: $width;
+        }
+    }
+}
+
+.truncate#{$post} {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 // Sizing
 .f {
     @for $i from 1 through 6 {
