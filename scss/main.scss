@@ -1,6 +1,8 @@
 @use "./normalize";
 @import "./variables";
 
+@import "./partials/fonts";
+
 // Compiles __partials to all breakpoints
 @at-root { 
     $post: &;
