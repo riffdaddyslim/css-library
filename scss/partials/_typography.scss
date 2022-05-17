@@ -5,6 +5,15 @@
     }
 }
 
+// Line Height
+.lh {
+    @for $i from 1 through 5 {
+        &#{$i}#{$post} {
+            line-height: 1 + ($i * .25em);
+        }
+    }
+}
+
 // Sizing
 .f {
     @for $i from 1 through 6 {
