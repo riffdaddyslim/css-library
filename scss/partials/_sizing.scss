@@ -34,6 +34,7 @@
         }
     }
 }
+
 .h {
     @for $e from 1 through 5 {
         &#{$e}#{$post} {
@@ -44,6 +45,14 @@
     @for $i from 1 through 10 {
         &-#{$i * 10}#{$post} {
             height: $i * 10%;
+        }
+    }
+}
+
+.vh {
+    @for $i from 1 through 11 {
+        &-#{$i * 10}#{$post} {
+            height: $i * 10vh;
         }
     }
 }
