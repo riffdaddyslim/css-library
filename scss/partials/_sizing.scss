@@ -1,0 +1,18 @@
+.w {
+    @for $e from 1 through 6 {
+        &#{$e}#{$post} {
+            width: 2rem * pow(2, ($e - 1));
+        }
+    }
+
+    @for $i from 1 through 10 {
+        &-#{$i * 10}#{$post} {
+            width: $i * 10%;
+        }
+    }
+
+    &-third#{$post} { width: calc(100% / 3); }
+    &-two-third#{$post} { width: calc(100% / 1.5); }
+    &-quarter#{$post} { width: 25%; }
+    &-two-quarters#{$post} { width: 75%; }
+}
