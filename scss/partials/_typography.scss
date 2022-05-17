@@ -121,3 +121,18 @@ $whiteSpace: pre, normal, nowrap;
         }
     }
 }
+
+// Word Break
+$break: (
+    break: break-all,
+    keep: keep-all,
+    normal: normal,
+    word: break-word
+);
+.wb {
+    @each $name, $break in $break {
+        &-#{$name}#{$post} {
+            word-break: $break;
+        }
+    }
+}
