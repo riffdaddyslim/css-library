@@ -4,7 +4,7 @@
   "description": "Repo for my custom css library built with scss.",
   "main": "main.scss",
   "scripts": {
-    "dev": "sass --watch scss:public/css",
+    "dev": "sass --watch scss:./ --no-source-map",
     "build": "sass scss:release --quiet --style compressed --no-source-map"
   },
   "repository": {
