@@ -156,3 +156,8 @@ $break: (
         }
     }
 }
+
+// Variants
+.small-caps#{$post} {
+    font-variant: small-caps;
+}
