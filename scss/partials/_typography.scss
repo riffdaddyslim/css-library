@@ -1,0 +1,6 @@
+// Color
+@each $name, $color in $colors {
+    .#{$name}#{$post} {
+        color: $color;
+    }
+}
