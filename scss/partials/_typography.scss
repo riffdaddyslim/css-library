@@ -1,3 +1,18 @@
+// Alignment
+$alignments: (
+    l: left,
+    c: center,
+    r: right,
+    j: justify
+);
+.t {
+    @each $name, $align in $alignments {
+        &#{$name}#{$post} {
+            text-align: $align;
+        }
+    }
+}
+
 // Color
 @each $name, $color in $colors {
     .#{$name}#{$post} {
