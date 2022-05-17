@@ -1,7 +1,11 @@
+@function calcSize($e) {
+    @return 2rem * pow(2, ($e - 1));
+}
+
 .w {
     @for $e from 1 through 6 {
         &#{$e}#{$post} {
-            width: 2rem * pow(2, ($e - 1));
+            width: calcSize($e);
         }
     }
 
@@ -20,12 +24,12 @@
 .mw {
     @for $e from 1 through 6 {
         &#{$e}#{$post} {
-            max-width: 2rem * pow(2, ($e - 1));
+            max-width: calcSize($e);
         }
     }
 
     &7#{$post} {
-        max-width: 2rem * pow(2, (5)) + 16rem;
+        max-width: calcSize(6) + 16rem;
     }
 
     @for $i from 1 through 10 {
@@ -38,7 +42,7 @@
 .h {
     @for $e from 1 through 5 {
         &#{$e}#{$post} {
-            height: 2rem * pow(2, ($e - 1));
+            height: calcSize($e);
         }
     }
 
@@ -52,7 +56,7 @@
 .mh {
     @for $e from 1 through 5 {
         &#{$e}#{$post} {
-            max-height: 2rem * pow(2, ($e - 1));
+            max-height: calcSize($e);
         }
     }
 
