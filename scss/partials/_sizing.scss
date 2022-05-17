@@ -20,17 +20,17 @@
 .mw {
     @for $e from 1 through 6 {
         &#{$e}#{$post} {
-            width: 2rem * pow(2, ($e - 1));
+            max-width: 2rem * pow(2, ($e - 1));
         }
     }
 
     &7#{$post} {
-        width: 2rem * pow(2, (5)) + 16rem;
+        max-width: 2rem * pow(2, (5)) + 16rem;
     }
 
     @for $i from 1 through 10 {
         &-#{$i * 10}#{$post} {
-            width: $i * 10%;
+            max-width: $i * 10%;
         }
     }
 }
