@@ -1,4 +1,7 @@
-@import "./partials/spacing";
+@import "./functions";
+
+@import "./partials/border";
 @import "./partials/display";
-@import "./partials/grid";
 @import "./partials/flex";
+@import "./partials/grid";
+@import "./partials/spacing";
