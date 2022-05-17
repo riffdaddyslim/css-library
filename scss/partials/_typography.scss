@@ -22,6 +22,19 @@
     }
 }
 
+// Spacing
+.ls {
+    &-tight#{$post} {
+        letter-spacing: -0.05em;
+    }
+
+    @for $i from 1 through 5 {
+        &#{$i}#{$post} {
+            letter-spacing: $i * .05em;
+        }
+    }
+}
+
 // Style
 $styles: (
     i: italic,
