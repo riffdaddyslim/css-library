@@ -6,7 +6,14 @@ $types: (
     l: -left
 );
 
+$styles: dashed, dotted, double, groove, hidden, inset, none, outset, ridge, solid;
 .b {
+    // Style
+    @each $style in $styles {
+        &-#{$style}#{$post} {
+            border-style: $style;
+        }
+    }
     // Type
     @each $b, $type in $types {
         &#{$b}#{$post} {
