@@ -5,6 +5,23 @@
     }
 }
 
+// Sizing
+.f {
+    @for $i from 1 through 6 {
+        &#{$i}#{$post} {
+            font-size: $i * .75rem;
+        }
+    }
+
+    &-head#{$post} {
+        font-size: 6rem;
+    }
+
+    &-sub#{$post} {
+        font-size: 5rem;
+    }
+}
+
 // Text Decoration
 $decorations: dashed, dotted, double, line-through, none, overline, solid, underline, wavy;
 @each $d in $decorations {
