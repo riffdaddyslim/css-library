@@ -111,3 +111,13 @@ $weights: (
         }
     }
 }
+
+// White Space
+$whiteSpace: pre, normal, nowrap;
+.ws {
+    @each $ws in $whiteSpace {
+        &-#{$ws}#{$post} {
+            white-space: $ws;
+        }
+    }
+}
