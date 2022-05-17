@@ -40,3 +40,22 @@ $decorations: dashed, dotted, double, line-through, none, overline, solid, under
         text-decoration: $d;
     }
 }
+
+// Weights
+$weights: (
+    i: italic,
+    n: normal
+);
+.fw {
+    @each $class, $weight in $weights {
+        &-#{$class}#{$post} {
+            font-weight: $weight;
+        }
+    }
+
+    @for $i from 1 through 9 {
+        &#{$i}#{$post} {
+            font-weight: $i * 100;
+        }
+    }
+}
