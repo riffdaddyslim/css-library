@@ -1,8 +1,39 @@
+$positions: (
+    bottom: bottom center,
+    center: center,
+    left: center left,
+    right: center right,
+    top: top center
+);
+
+$sizes: contain, cover; 
+
 .bg {
     // Colors
     @each $name, $color in $colors {
         &-#{$name}#{$post} {
             background-color: $color;
+        }
+    }
+
+    // Image
+    &-image {
+        background-image: var(--bg-image);
+    }
+
+
+    // Position
+    @each $name, $pos in $positions {
+        &-#{$name}#{$post} {
+            background-repeat: no-repeat;
+            background-position: $pos;
+        }
+    }
+
+    // Size
+    @each $name, $size in $sizes {
+        &-#{$name}#{$post} {
+            background-size: $sizes;
         }
     }
 }
