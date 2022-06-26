@@ -1,0 +1,30 @@
+$x-positions: left, right;
+$y-positions: top, bottom;
+
+$indicies: -1, 1, 2, 3, 4, 5, 99, 999, 9999;
+$positions: absolute, relative, fixed;
+
+@each $position in $positions {
+    .#{$position}#{$post} {
+        position: $position;
+    }
+}
+
+@each $index in $indicies {
+    .z-#{$index}#{$post} {
+        z-index: $index;
+    }
+}
+
+@each $y-pos in $y-positions {
+    @each $x-pos in $x-positions {
+        .#{$y-pos}-#{$x-pos}#{$post} {
+            #{$y-pos}: 0;
+            #{$x-pos}: 0;
+        }
+    }
+}
+
+.isolate#{$post} {
+    isolation: isolate;
+}
