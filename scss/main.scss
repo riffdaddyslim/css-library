@@ -2,8 +2,9 @@
 @import "./variables";
 
 @import "./partials/fonts";
+@import "./partials/background";
 
-// Compiles __partials to all breakpoints
+// Compiles _partials to all breakpoints
 @at-root { 
     $post: &;
     @import "./_partials";

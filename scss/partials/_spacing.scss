@@ -1,14 +1,32 @@
-$types: m, p;
-$variants: a, t, r, b, l;
+$types: (
+    m: margin,
+    p: padding
+);
+$variants: (
+    a: "",
+    t: -top,
+    r: -right,
+    b: -bottom,
+    l: -left
+);
 
-@each $t in $types {
-    @each $v in $variants {
-        @for $i from 1 through 7 {
+@each $t, $prop in $types {
+    @each $v, $propPost in $variants {
+        @for $i from 0 through 7 {
             .#{$t} {
                 &#{$v}#{$i}#{$post} {
-                    margin: $i * $spacing;
+                    #{$prop}#{$propPost}: $i * $spacing;
                 }
             }
+        }
+    }
+
+    @if $t == "m" {
+        .ml-auto#{$post} {
+            margin-left: auto;
+        }
+        .mr-auto#{$post} {
+            margin-right: auto;
         }
     }
 }

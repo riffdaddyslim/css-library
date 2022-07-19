@@ -1,12 +1,12 @@
 .grid {
     @for $c from 2 through 12 {
-        &-#{$c}#{$post} {
+        &-cols-#{$c}#{$post} {
             grid-template-columns: repeat($c, 1fr);
         }
     }
 
     @for $c from 2 through 12 {
-        &-#{$c}#{$post} {
+        &-rows-#{$c}#{$post} {
             grid-template-rows: repeat($c, 1fr);
         }
     }

@@ -27,7 +27,7 @@ $transforms: (
 );
 
 $weights: (
-    i: italic,
+    b: bold,
     n: normal
 );
 
@@ -83,7 +83,7 @@ $widths: (
 .f {
     @for $i from 1 through 6 {
         &#{$i}#{$post} {
-            font-size: $i * .75rem;
+            font-size: $i * $fontSize + 8px;
         }
     }
 

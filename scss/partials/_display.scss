@@ -3,8 +3,8 @@ $displays: (
     b: block,
     ib: inline-block,
     i: inline,
-    f: flex,
-    g: grid
+    -flex: flex,
+    -grid: grid
 );
 
 @each $name, $display in $displays {

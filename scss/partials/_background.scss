@@ -11,7 +11,7 @@ $sizes: contain, cover;
 .bg {
     // Colors
     @each $name, $color in $colors {
-        &-#{$name}#{$post} {
+        &-#{$name} {
             background-color: $color;
         }
     }
@@ -24,16 +24,16 @@ $sizes: contain, cover;
 
     // Position
     @each $name, $pos in $positions {
-        &-#{$name}#{$post} {
+        &-#{$name} {
             background-repeat: no-repeat;
             background-position: $pos;
         }
     }
 
     // Size
-    @each $name, $size in $sizes {
-        &-#{$name}#{$post} {
-            background-size: $sizes;
+    @each $size in $sizes {
+        &-#{$size} {
+            background-size: $size;
         }
     }
 }
