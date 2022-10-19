@@ -20,14 +20,26 @@ $variants: (
             }
         }
     }
+}
 
-    @if $t == "m" {
-        .ml-auto#{$post} {
-            margin-left: auto;
-        }
-        .mr-auto#{$post} {
-            margin-right: auto;
-        }
+.ml-auto#{$post} {
+    margin-left: auto;
+}
+.mr-auto#{$post} {
+    margin-right: auto;
+}
+
+@for $i from 0 through 7 {
+    .pv#{$i}#{$post} {
+        padding-top: $i * $spacing;
+        padding-bottom: $i * $spacing;
+    }
+}
+
+@for $i from 0 through 7 {
+    .ph#{$i}#{$post} {
+        padding-left: $i * $spacing;
+        padding-right: $i * $spacing;
     }
 }
 

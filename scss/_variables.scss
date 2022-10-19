@@ -5,6 +5,10 @@ $xlarge: 80rem;
 
 // Colors
 $colors: (
+    primary: var(--primary),
+    secondary: var(--secondary),
+    accent: var(--accent),
+
     black: #000,
     near-black: #111,
     dark-gray:#333,

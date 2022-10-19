@@ -27,6 +27,10 @@ $styles: dashed, dotted, double, groove, hidden, inset, none, outset, ridge, sol
                 border-radius: $i * 10%;
             }
         }
+
+        &-pill#{$post} {
+            border-radius: 99999px;
+        }
     }
 
     // Style
