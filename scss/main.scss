@@ -1,4 +1,5 @@
 @use "./normalize";
+
 @import "./variables";
 
 @import "./partials/fonts";
@@ -6,35 +7,27 @@
 
 // Compiles _partials to all breakpoints
 @at-root { 
-    $post: &;
+    $post: "";
     @import "./_partials";
 }
 
 @media screen and (min-width: $medium) {
-    -ns {
-        $post: &;
-        @at-root{ @import "./_partials"; }
-    }
+    $post: -ns;
+    @at-root{ @import "./_partials"; }
 }
 
 @media screen and (min-width: $medium) and (max-width: $large) {
-    -m {
-        $post: &;
-        @at-root{ @import "./_partials"; }
-    }
+    $post: -m;
+    @at-root{ @import "./_partials"; }
 }
 
 @media screen and (min-width: $large) and (max-width: $xlarge) {
-    -l {
-        $post: &;
-        @at-root{ @import "./_partials"; }
-    }
+    $post: -l;
+    @at-root{ @import "./_partials"; }
 }
 
 
 @media screen and (min-width: $xlarge) {
-    -xl {
-        $post: &;
-        @at-root{ @import "./_partials"; }
-    }
+    $post: -xl;
+    @at-root{ @import "./_partials"; }
 }

@@ -2,7 +2,7 @@ $x-positions: left, right;
 $y-positions: top, bottom;
 
 $indicies: -1, 1, 2, 3, 4, 5, 99, 999, 9999;
-$positions: absolute, relative, fixed;
+$positions: absolute, relative, fixed, unset;
 
 @each $position in $positions {
     .#{$position}#{$post} {

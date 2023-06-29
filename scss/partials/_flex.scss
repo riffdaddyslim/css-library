@@ -1,4 +1,5 @@
 $directions: column, column-reverse, row, row-reverse;
+$wrap: wrap, nowrap;
 $spacings: (
     between: space-between,
     start: flex-start,
@@ -19,6 +20,12 @@ $aligns: (
     @each $d in $directions {
         &-#{$d}#{$post} {
             flex-direction: $d;
+        }
+    }
+
+    @each $w in $wrap {
+        &-#{$w}#{$post} {
+            flex-wrap: $w;
         }
     }
 }

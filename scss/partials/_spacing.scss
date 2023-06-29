@@ -19,6 +19,14 @@ $variants: (
                 }
             }
         }
+
+        .#{$t}#{$v}-s1#{$post} {
+            #{$prop}#{$propPost}: var(--spacing-1, 0);
+        }
+
+        .#{$t}#{$v}-s2#{$post} {
+            #{$prop}#{$propPost}: var(--spacing-2, 0);
+        }
     }
 }
 
@@ -36,6 +44,16 @@ $variants: (
     }
 }
 
+.pv-s1#{$post} {
+    padding-top: var(--spacing-1, 0);
+    padding-bottom: var(--spacing-1, 0);
+}
+
+.pv-s2#{$post} {
+    padding-top: var(--spacing-2, 0);
+    padding-bottom: var(--spacing-2, 0);
+}
+
 @for $i from 0 through 7 {
     .ph#{$i}#{$post} {
         padding-left: $i * $spacing;
@@ -43,20 +61,54 @@ $variants: (
     }
 }
 
-@for $i from 1 through 5 {
+.ph-s1#{$post} {
+    padding-left: var(--spacing-1, 0);
+    padding-right: var(--spacing-1, 0);
+}
+
+.ph-s2#{$post} {
+    padding-left: var(--spacing-2, 0);
+    padding-right: var(--spacing-2, 0);
+}
+
+@for $i from 0 through 5 {
     .gap#{$i}#{$post} {
         gap: $i * $spacing;
     }
 }
 
-@for $i from 1 through 5 {
+.gap-s1#{$post} {
+    gap: var(--spacing-1, 0);
+}
+
+.gap-s2#{$post} {
+    gap: var(--spacing-2, 0);
+}
+
+@for $i from 0 through 5 {
     .row-gap#{$i}#{$post} {
         row-gap: $i * $spacing;
     }
 }
 
-@for $i from 1 through 5 {
+.row-gap-s1#{$post} {
+    row-gap: var(--spacing-1, 0);
+}
+
+.row-gap-s2#{$post} {
+    row-gap: var(--spacing-2, 0);
+}
+
+@for $i from 0 through 5 {
     .col-gap#{$i}#{$post} {
         column-gap: $i * $spacing;
     }
+}
+
+.col-gap-s1#{$post} {
+    column-gap: var(--spacing-1, 0);
+}
+
+.col-gap-s2#{$post} {
+    column-gap: var(--spacing-2, 0);
 }

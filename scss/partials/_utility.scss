@@ -1,0 +1,11 @@
+$floats: left, right, center;
+
+@each $float in $floats {
+    .f-#{$float}#{$post} {
+        float: $float;
+    }
+}
+
+nav ul {
+    list-style: none;
+}
